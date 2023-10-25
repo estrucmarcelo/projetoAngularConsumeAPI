@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "product_name": "Table improvement",
+            "product_description" : "table for all to study and work",
+            "id": 1
+        },
+        {
+            "product_name": "Chair",
+            "product_description" : "best sit to study and read",
+            "id": 2
+        }
+    ]
+}

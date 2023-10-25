@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Action</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of listProducts">
+            <th scope="row">{{product.id}}</th>
+            <td >{{product.product_name}}</td>
+            <td >{{product.product_description}}</td>
+
+
+        </tr>
+        
+    </tbody>
+    
+</table>
