@@ -43,6 +43,11 @@ export class ProductService {
    
   }
 
+  createProduct(data):Observable<Product>{
+    return this.http.post<Product>(this.baseurl + "/products/", JSON.stringify(data),
+    this.httpOptions).pipe(retry(1),catchError(this.errorHandl));
+  }
+
   errorHandl(error:any){
     let errorMessage = ''
     // o erro está vindo do front

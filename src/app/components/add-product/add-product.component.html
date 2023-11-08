@@ -1,1 +1,19 @@
-<p>add-product works!</p>
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3>Add Product</h3>
+            <form [formGroup]="productForm" (ngSubmit)="submitForm()" novalidate>
+                <div class="form-group">
+                    <label>Product</label>
+                    <input type="text" formControlName="product_name" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>Product Details</label>
+                    <textarea class="form-control" formControlName="product_description" rows="3" maxlength="50"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { ProductService } from './product.service';
 import { ListChapterTagComponent } from './components/list-chapter-tag/list-chapter-tag.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ListChapterTagComponent } from './components/list-chapter-tag/list-chap
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
