@@ -1,19 +1,32 @@
-<table>
-    <thead>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Description</td>
-        <td>Action</td>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of listProducts">
-            <th scope="row">{{product.id}}</th>
-            <td >{{product.product_name}}</td>
-            <td >{{product.product_description}}</td>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Imagem</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of listProducts">
+              <th scope="row">{{product.id}}</th>
+              <td>{{product.title}}</td>
+              <td>{{product.price}}</td>
+              <td><img width="300" height="360" src={{product.image}}></td>
+              <td>
+                <button type="button" class="btn btn-primary"><i class="bi bi-eye-fill"></i></button>
+                <button type="button" class="mx-2 btn btn-success"><i class="bi bi-pencil-square"></i></button>
+              <button type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 
-        </tr>
-        
-    </tbody>
-    
-</table>

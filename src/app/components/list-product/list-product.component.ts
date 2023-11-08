@@ -19,7 +19,7 @@ export class ListProductComponent {
   }
 
   loadProducts(){
-    this.productService.getProducts().subscribe((data: {}) =>{
+    this.productService.getProductsFake().subscribe((data: {}) =>{
       this.listProducts = data
     })
   }
