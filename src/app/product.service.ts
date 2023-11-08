@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, retry, throwError } from 'rxjs';
+import { ChapterTag } from './model/chapterTag';
 import { Product } from './model/product';
 import { ProductApiFake } from './model/productApiFake';
 
@@ -15,6 +16,9 @@ export class ProductService {
 
   baseurlFakeApi = "https://fakestoreapi.com"
 
+
+  baseUrlSenac = "http://academico3.rj.senac.br"
+
   httpOptions = {
     headers : new HttpHeaders({
       'Content-Type': 'application/json'
@@ -25,6 +29,10 @@ export class ProductService {
   //   return this.http.get<Product>(this.baseurl + '/products/');
    
   // }
+
+  getChapterTag(): Observable<ChapterTag>{
+    return this.http.get<ChapterTag>(this.baseUrlSenac + '/api/ChapterTag').pipe(retry(1),catchError(this.errorHandl))
+  }
 
   getProductsFake(): Observable<ProductApiFake>{
     return this.http.get<ProductApiFake>(this.baseurlFakeApi + '/products?limit=5').pipe(retry(1),catchError(this.errorHandl))

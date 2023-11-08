@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Status</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let chapter of listChapter">
+              <th scope="row">{{chapter.id}}</th>
+              <td>{{chapter.descricao}}</td>
+              <td>{{chapter.status}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
